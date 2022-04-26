@@ -1,27 +1,29 @@
-package auxiliares;
+package util;
 
 import java.util.*;
 
 public class GerarNumAleatorios {
     public static void main(String[] args) {
 
-        int TOTAL_NUMEROS = 10;
-        int[] numeros = gerarVetorNumerosAleatorios(TOTAL_NUMEROS);
+        int QTDE_NUMEROS = 5;
+        int NUM_DIGITOS = 2;
+        int[] numeros = gerarVetorNumerosAleatorios(QTDE_NUMEROS, NUM_DIGITOS);
         printVetorNumeros(numeros);
 
     }
 
-    public static void printVetorNumeros(int[] vet){
+    public static void printVetorNumeros(int[] vet) {
         for (int i = 0; i < vet.length; i++) {
             System.out.print(vet[i] + " ");
         }
+        System.out.println();
     }
 
-    public static int[] gerarVetorNumerosAleatorios(int TOTAL_NUMEROS){
-        int[] vet = new int[TOTAL_NUMEROS];
+    public static int[] gerarVetorNumerosAleatorios(int QTDE_NUMEROS, int NUM_DIGITOS) {
+        int[] vet = new int[QTDE_NUMEROS];
         int cont = 0;
-        while (cont < TOTAL_NUMEROS) {
-            int n = generateRandomDigits(9);
+        while (cont < QTDE_NUMEROS) {
+            int n = generateRandomDigits(NUM_DIGITOS);
             if (!contains(n, vet)) {
                 vet[cont] = n;
                 cont++;

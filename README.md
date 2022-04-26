@@ -3,4 +3,14 @@
 ### Ordenação
 
 ---
+## package util
+Pacote para criação de códigos utilitários e de apoio para construção de testes para os métodos de ordenação
+
+## package ordenacao
+Pacote contendo as implementações dos diversos métodos de ordenação
+
+
+
+
+
 
