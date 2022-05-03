@@ -8,7 +8,7 @@ import ordenacao.SelectionSort;
 public class TestesOrdenacao {
     public static void main(String[] args) {
 
-        int QTDE_NUMEROS = 20;
+        int QTDE_NUMEROS = 10;
         int NUM_DIGITOS = 2;
 
         Util util = new Util();
@@ -33,6 +33,17 @@ public class TestesOrdenacao {
         util.printVetorNumeros(numeros);
         selection.print();
 
+        int[] numeros_quicksort = util.copia(numeros);
+        SelectionSort quicksort = new SelectionSort(numeros_quicksort);
+        quicksort.sort();
+        util.printVetorNumeros(numeros);
+        quicksort.print();
+
+        int[] numeros_mergesort = util.copia(numeros);
+        SelectionSort mergesort = new SelectionSort(numeros_mergesort);
+        mergesort.sort();
+        util.printVetorNumeros(numeros);
+        mergesort.print();
 
 //        int numRepeticoes = 30;
 //        double soma;

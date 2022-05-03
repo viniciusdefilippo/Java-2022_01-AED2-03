@@ -34,12 +34,10 @@ public class QuickSortEstruturada {
         i = p - 1;
         j = r + 1;
         while (i < j) {
-            do {
-                j--;
-            } while (X[j] > pivo);
-            do {
-                i++;
-            } while (X[i] < pivo);
+            do j--;
+            while (X[j] > pivo);
+            do i++;
+            while (X[i] < pivo);
             if (i < j) troca(X, i, j);
         }
         return j;
@@ -52,6 +50,5 @@ public class QuickSortEstruturada {
             quicksort(X, p, q);
             quicksort(X, q + 1, r);
         }
-
     }
 }

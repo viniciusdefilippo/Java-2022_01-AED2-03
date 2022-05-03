@@ -18,11 +18,4 @@ public class InsertionSort extends MetodoOrdenacao {
             vet[j + 1] = eleito;
         }
     }
-
-    public void print() {
-        for (int i = 0; i < vet.length; i++) {
-            System.out.print(vet[i] + " ");
-        }
-        System.out.println();
-    }
 }
